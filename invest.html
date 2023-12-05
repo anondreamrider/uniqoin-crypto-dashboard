@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UniQoin - Buy & Sell Digital Currency</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+   <!-- 
+    - chart
+  -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+
+
+</head>
+
+<body>      
+
+    
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="./index.html" class="logo">
+        <img src="./assets/images/logo.png" width="32" height="32" alt="UniQoin logo">
+        UniQoin
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="./index.html" class="navbar-link" data-nav-link>Homepage</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="./invest.html" class="navbar-link active" data-nav-link>Invest</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="./market.html" class="navbar-link" data-nav-link>Markets</a>
+          </li>
+
+        </ul>
+        
+      </nav>
+
+      <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggler>
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+        <span class="line line-3"></span>
+      </button>
+
+
+    </div>
+	  
+
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #CHART
+      -->
+
+      <section class="section hero" aria-label="hero" data-section>
+        <div class="container">
+
+        
+
+            <div class="chart-contain">
+                <canvas id="portfolioChart"></canvas>
+            </div>
+         
+        
+        </div>
+
+        </div>
+      </section>
+
+     
+     <!-- 
+        - #SUMMARY
+      -->
+
+      <section class="section invest" aria-label="crypto trend" data-section>
+        <div class="container">
+
+          <div class="invest-tab">
+
+            <ul class="tab-content">
+                <div class="card-title-wrapper">
+              <li>
+                <div class="container">
+                    <div class="invest-box">
+                    <div class="invest-card">
+                        <span class="card-title">Balance Details</span>
+                        <span class="card-value">$140,989</span>
+                        <span class="card-valuebtc">3.369075 BTC</span>
+                    
+            
+                        
+                                <span class="card-incomevalue">$3,742.00</span>
+                                <span class="card-income">Income</span>
+                
+                
+                                <span class="card-expensevalue">$6,987.00</span>
+                                <span class="card-expense">Expense</span>
+                
+                        
+                        <div class="card-analytics">
+                            <button class="card-receive">Receive</button>
+                            <button class="card-send">Send</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+              </li>
+            <li>
+                <div class="transaction">
+                    <div class="transaction-box">
+                    <table class="container">
+                        <thead>
+                            <tr>
+                                <th class="transaction-title">Transactions</th>
+                                <th class="btn-link">View All</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                        <div class="transaction-sendrecieve">
+                                            <span class="transaction-status">Sent Bitcoin</span>
+                                            <span class="transaction-date">30 Nov, 2020</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="transaction-amount">
+                                        <span class="transaction-sent">-$3,892.00</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                        <div class="transaction-sendrecieve">
+                                            <span class="transaction-status">Received USDT</span>
+                                            <span class="transaction-date">22 Nov, 2023</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="transaction-amount">
+                                        <span class="transaction-receieved ">+$1,535.00</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                        <div class="transaction-sendrecieve">
+                                            <span class="transaction-status ">Sent Ethereum</span>
+                                            <span class="transaction-date ">22 Nov, 2020</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="transaction-amount">
+                                        <span class="transaction-sent">-$4,749.00</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                        <div class="transaction-sendrecieve">
+                                            <span class="transaction-status">Sent Bitcoin</span>
+                                            <span class="transaction-date">19 Nov, 2020</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="transaction-amount">
+                                        <span class="transaction-sent">-$2,289.00</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                        <div class="transaction-sendrecieve">
+                                            <span class="transaction-status">Received Bitcoin</span>
+                                            <span class="transaction-date">17 Nov, 2020</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="transaction-amount">
+                                        <span class="transaction-receieved ">+$5,968.00</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                        <div class="transaction-sendrecieve">
+                                            <span class="transaction-status ">Sent Solana</span>
+                                            <span class="transaction-date ">12 Nov, 2020</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="transaction-amount">
+                                        <span class="transaction-sent">-$1,281.00</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                </div>
+            </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+      </section>
+  
+      
+    <!-- 
+    - #MYCRYPTO
+    -->
+
+
+
+
+      <section class="section market" aria-label="market update" data-section>
+        <div class="container">
+            
+        <div class="title-wrapper">
+            <h3 class="h2 section-title">My Crypto</h3>
+
+            <a href="#" class="btn-link">See All Coins</a>
+            </div>
+
+          <div class="market-tab">
+
+           
+            <table class="market-table">
+
+              <thead class="table-head">
+
+                <tr class="table-row table-title">
+
+                  <th class="table-heading"></th>
+
+                  <th class="table-heading" scope="col">#</th>
+
+                  <th class="table-heading" scope="col">Name</th>
+
+                  <th class="table-heading" scope="col">Total Balance</th>
+
+                  <th class="table-heading" scope="col">Price</th>
+
+
+                  <th class="table-heading"></th>
+
+                </tr>
+
+              </thead>
+
+              <tbody class="table-body">
+
+                <tr class="table-row">
+
+                  <td class="table-data">
+                    <button class="add-to-fav" aria-label="Add to favourite" data-add-to-fav>
+                      <ion-icon name="star-outline" aria-hidden="true" class="icon-outline"></ion-icon>
+                      <ion-icon name="star" aria-hidden="true" class="icon-fill"></ion-icon>
+                    </button>
+                  </td>
+
+                  <th class="table-data rank" scope="row">1</th>
+
+                  <td class="table-data">
+                    <div class="wrapper">
+                      <img src="./assets/images/coin-1.svg" width="20" height="20" alt="Bitcoin logo" class="img">
+
+                      <h3>
+                        <a href="#" class="coin-name">Bitcoin <span class="span">BTC</span></a>
+                      </h3>
+                    </div>
+                  </td>
+
+                  <td class="table-data last-price">$78,538.54</td>
+
+                  <td>
+                    <div>
+                        <span class="table-data last-update">$41,883.95</span>
+                        <span class="table-data last-update red">-0.79%</span>
+                    </div>
+                    </td>
+
+                </tr>
+
+                <tr class="table-row">
+
+                  <td class="table-data">
+                    <button class="add-to-fav" aria-label="Add to favourite" data-add-to-fav>
+                      <ion-icon name="star-outline" aria-hidden="true" class="icon-outline"></ion-icon>
+                      <ion-icon name="star" aria-hidden="true" class="icon-fill"></ion-icon>
+                    </button>
+                  </td>
+
+                  <th class="table-data rank" scope="row">2</th>
+
+                  <td class="table-data">
+                    <div class="wrapper">
+                      <img src="./assets/images/coin-2.svg" width="20" height="20" alt="Ethereum logo" class="img">
+
+                      <h3>
+                        <a href="#" class="coin-name">Ethereum <span class="span">ETH</span></a>
+                      </h3>
+                    </div>
+                  </td>
+
+                  <td class="table-data last-price">$26,751.54</td>
+                  <td>
+                    <div>
+                        <span class="table-data last-update">$2,143.24</span>
+                        <span class="table-data last-update green">+2.55%</span>
+                    </div>
+                    </td>
+
+                 
+                <tr class="table-row">
+
+                  <td class="table-data">
+                    <button class="add-to-fav" aria-label="Add to favourite" data-add-to-fav>
+                      <ion-icon name="star-outline" aria-hidden="true" class="icon-outline"></ion-icon>
+                      <ion-icon name="star" aria-hidden="true" class="icon-fill"></ion-icon>
+                    </button>
+                  </td>
+
+                  <th class="table-data rank" scope="row">3</th>
+
+                  <td class="table-data">
+                    <div class="wrapper">
+                      <img src="./assets/images/coin-3.svg" width="20" height="20" alt="Tether logo" class="img">
+
+                      <h3>
+                        <a href="#" class="coin-name">Tether <span class="span">USDT/USD</span></a>
+                      </h3>
+                    </div>
+                  </td>
+
+                  <td class="table-data last-price">$12,843.45</td>
+                  
+                  <td>
+                  <div>
+                    <span class="table-data last-update">$1.00</span>
+                    <span class="table-data last-update red">-0.03%</span>
+                  </div>
+                </td>
+
+                </tr>
+
+                <tr class="table-row">
+
+                  <td class="table-data">
+                    <button class="add-to-fav" aria-label="Add to favourite" data-add-to-fav>
+                      <ion-icon name="star-outline" aria-hidden="true" class="icon-outline"></ion-icon>
+                      <ion-icon name="star" aria-hidden="true" class="icon-fill"></ion-icon>
+                    </button>
+                  </td>
+
+                  <th class="table-data rank" scope="row">4</th>
+
+                  <td class="table-data">
+                    <div class="wrapper">
+                      <img src="./assets/images/coin-4.svg" width="20" height="20" alt="BNB logo" class="img">
+
+                      <h3>
+                        <a href="#" class="coin-name">BNB <span class="span">BNB/USD</span></a>
+                      </h3>
+                    </div>
+                  </td>
+
+                  <td class="table-data last-price">$16,523.37</td>
+
+                  <td>
+                  <div>
+                    <span class="table-data last-update">$231.79</span>
+                    <span class="table-data last-update red">-1.24%</span>
+                  </div>
+                </td>
+
+
+                <tr class="table-row">
+
+                  <td class="table-data">
+                    <button class="add-to-fav" aria-label="Add to favourite" data-add-to-fav>
+                      <ion-icon name="star-outline" aria-hidden="true" class="icon-outline"></ion-icon>
+                      <ion-icon name="star" aria-hidden="true" class="icon-fill"></ion-icon>
+                    </button>
+                  </td>
+
+                  <th class="table-data rank" scope="row">5</th>
+
+                  <td class="table-data">
+                    <div class="wrapper">
+                      <img src="./assets/images/coin-5.svg" width="20" height="20" alt="Solana logo" class="img">
+
+                      <h3>
+                        <a href="#" class="coin-name">Solana <span class="span">SOL</span></a>
+                      </h3>
+                    </div>
+                  </td>
+
+                  <td class="table-data last-price">$6,332.71</td>
+
+                  <td>
+                    <div>
+                      <span class="table-data last-update">$61.67</span>
+                      <span class="table-data last-update green">+1.45%</span>
+                    </div>
+                  </td>
+
+
+                </tr>
+
+              </tbody>
+
+            </table>
+
+          </div>
+
+        </div>
+      </section>
+
+    </article>
+</main>
+
+
+
+    <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          &copy; 2023 UniQoin All Rights Reserved by <a href="#" class="copyright-link">Team-Achievers</a>
+        </p>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+  </footer>
+
+
+    <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+  
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
